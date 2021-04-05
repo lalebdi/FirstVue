@@ -1,11 +1,9 @@
 <template>
     <div>
-            <router-view/>
     <SearchProduct />
     <FilterProducts/>
     <br />
     <Products />
-    
     </div>
 </template>
 
@@ -14,7 +12,7 @@ import Products from '../components/Products';
 import SearchProduct from '../components/SearchProduct';
 import FilterProducts from "../components/FilterProducts";
 export default {
-name: 'Products',
+name: 'ProductsList',
 components: {
     Products,
     SearchProduct,

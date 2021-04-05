@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+   
     <div class="container">
       <div class="page" v-if="showSpinner">
           <b-spinner variant="primary" class="spinner" key="primary"></b-spinner>
@@ -7,31 +8,24 @@
     <div id="nav">
       <top-header></top-header>
     </div>
-      <SearchProduct />
-      <FilterProducts/>
-      <br />
-      <Products />
+       <router-view/>
+
 
     </div>
-    <div id="nav">
-    </div>
 
+      
   </div>
 </template>
 
 <script>
-import Products from './components/Products';
-import SearchProduct from './components/SearchProduct';
-import FilterProducts from "./components/FilterProducts";
+
 import TopHeader from './components/TopHeader.vue'
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'app',
   components: {
-    Products,
-    SearchProduct,
-    FilterProducts,
+
     'top-header': TopHeader 
   },
   computed: {
