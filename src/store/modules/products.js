@@ -16,7 +16,6 @@ const actions = {
         const response = await axios.get(
             'https://api.stifirestop.com/products?load[]=images'
         ).then(res =>res.data.data).catch(error => console.log(error));
-            // console.log(response.data)
             commit('setProducts', response);
             commit("setSpinner", false);
     },
