@@ -32,11 +32,6 @@ const actions = {
         commit('setProducts', response);
     },
 
-    async deleteProduct({ commit }, id) { // for routing
-        await axios.delete(`https://api.stifirestop.com/products/${id}?load[]=images`);
-    
-        commit('removeProduct', id);
-    },
 
     async filterProducts({ commit }, e) { // for pagination
         // Get selected number
